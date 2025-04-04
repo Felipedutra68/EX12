@@ -1,5 +1,6 @@
 package EX12;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,23 +13,26 @@ public class EX4_Pares {
 
         Scanner teclado = new Scanner(System.in);
 
+         ArrayList<Integer> set1 = new ArrayList<>();
+        
         int[] set = new int[5];
 
         for (int i = 1; i <= 5; i++) {
 
             System.out.println("Digite um numero");
-            set[i] = teclado.nextInt();
+            int n1 = teclado.nextInt();
 
-        }
-
-        System.out.println("Pares presentes");
-
-        for (int nome2 : set) {
-            if (nome2 % 2 == 0) {
-               
-                System.out.println(nome2);
+            for (int nome2 : set) {
+            
+            set1.add(n1);
             }
         }
+
+        set1.toArray();
+        
+        System.out.println("PARES\n " + set1);
+
+      
 
     }
 
